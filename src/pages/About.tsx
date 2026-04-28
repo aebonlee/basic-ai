@@ -348,9 +348,9 @@ const About = (): ReactElement => {
   const content = topics[currentTopic] || topics.intro;
 
   const subNavItems = [
-    { path: '/about/intro', labelKo: '사이트 소개', labelEn: 'About' },
-    { path: '/about/roadmap', labelKo: '학습 로드맵', labelEn: 'Roadmap' },
-    { path: '/about/how-to-learn', labelKo: '학습 방법', labelEn: 'How to Learn' }
+    { path: '/about/intro', labelKo: 'About Basic AI', labelEn: 'About Basic AI' },
+    { path: '/about/roadmap', labelKo: 'Learning Roadmap', labelEn: 'Learning Roadmap' },
+    { path: '/about/how-to-learn', labelKo: 'Study Guide', labelEn: 'Study Guide' }
   ];
 
   return (
@@ -362,7 +362,7 @@ const About = (): ReactElement => {
 
       <section className="page-header">
         <div className="container">
-          <h2>{language === 'ko' ? '소개' : 'About'}</h2>
+          <h2>About</h2>
           <p>{language === 'ko' ? 'Basic AI 학습 플랫폼을 소개합니다' : 'Learn about the Basic AI learning platform'}</p>
         </div>
       </section>
@@ -371,7 +371,7 @@ const About = (): ReactElement => {
         <div className="container">
           <div className="content-layout">
             <nav className="side-nav">
-              <div className="side-nav-title">{language === 'ko' ? '소개' : 'About'}</div>
+              <div className="side-nav-title">About</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}

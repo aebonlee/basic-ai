@@ -345,10 +345,10 @@ const Ethics = (): ReactElement => {
   const content = topics[currentTopic] || topics['bias'];
 
   const subNavItems = [
-    { path: '/ethics/bias', labelKo: '편향과 공정성', labelEn: 'Bias & Fairness' },
-    { path: '/ethics/privacy', labelKo: '개인정보 보호', labelEn: 'Privacy' },
-    { path: '/ethics/responsibility', labelKo: '책임있는 AI', labelEn: 'Responsible AI' },
-    { path: '/ethics/future', labelKo: 'AI와 미래사회', labelEn: 'AI & Future' }
+    { path: '/ethics/bias', labelKo: 'AI 편향 & 공정성', labelEn: 'Bias & Fairness' },
+    { path: '/ethics/privacy', labelKo: 'Privacy · 개인정보', labelEn: 'Privacy' },
+    { path: '/ethics/responsibility', labelKo: 'Responsible AI', labelEn: 'Responsible AI' },
+    { path: '/ethics/future', labelKo: 'AI & 미래사회', labelEn: 'AI & Future' }
   ];
 
   return (
@@ -360,7 +360,7 @@ const Ethics = (): ReactElement => {
 
       <section className="page-header">
         <div className="container">
-          <h2>{language === 'ko' ? 'AI 윤리' : 'AI Ethics'}</h2>
+          <h2>AI Ethics</h2>
           <p>{language === 'ko' ? '인공지능의 윤리적 이슈와 책임있는 사용법을 배웁니다' : 'Learn about ethical issues and responsible use of AI'}</p>
         </div>
       </section>
@@ -369,7 +369,7 @@ const Ethics = (): ReactElement => {
         <div className="container">
           <div className="content-layout">
             <nav className="side-nav">
-              <div className="side-nav-title">{language === 'ko' ? 'AI 윤리' : 'AI Ethics'}</div>
+              <div className="side-nav-title">AI Ethics</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}
