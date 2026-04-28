@@ -190,145 +190,127 @@ main {
 }
 
 /* ============================================
-   Highlights (3카드)
+   Category Grid (6카드 — 카테고리별 그룹)
    ============================================ */
-.highlights-section {
+.categories-section {
   background: var(--bg-light-gray, #f5f7fa);
 }
 
-[data-theme="dark"] .highlights-section {
+[data-theme="dark"] .categories-section {
   background: var(--bg-medium-gray, #1e1e2e);
 }
 
-.highlights-grid {
+.category-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.highlight-card {
+.category-card {
   background: var(--bg-white, #fff);
   border: 1px solid var(--border-light, #e5e7eb);
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
+  border-top: 4px solid var(--card-accent, #1a237e);
+  border-radius: 12px;
+  padding: 1.75rem;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.highlight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(26, 35, 126, 0.1);
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
 }
 
-[data-theme="dark"] .highlight-card {
+[data-theme="dark"] .category-card {
   background: var(--bg-light, #2a2a3e);
   border-color: var(--border-color, #3a3a4e);
-}
-[data-theme="dark"] .highlight-card:hover {
-  box-shadow: 0 12px 32px rgba(83, 109, 254, 0.15);
+  border-top-color: var(--card-accent, #536dfe);
 }
 
-.highlight-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+[data-theme="dark"] .category-card:hover {
+  box-shadow: 0 8px 28px rgba(83, 109, 254, 0.15);
 }
 
-.highlight-card h3 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--text-primary);
-}
-
-.highlight-card p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  flex: 1;
-}
-
-.highlight-link {
-  display: inline-block;
-  margin-top: 1.25rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1a237e;
-}
-[data-theme="dark"] .highlight-link {
-  color: #7986cb;
-}
-
-/* ============================================
-   Topics Grid (12카드)
-   ============================================ */
-.topics-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-
-.topic-card {
-  background: var(--bg-white, #fff);
-  border: 1px solid var(--border-light, #e5e7eb);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
-}
-.topic-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(26, 35, 126, 0.08);
-  border-color: rgba(26, 35, 126, 0.2);
-}
-
-[data-theme="dark"] .topic-card {
-  background: var(--bg-light, #2a2a3e);
-  border-color: var(--border-color, #3a3a4e);
-}
-[data-theme="dark"] .topic-card:hover {
-  box-shadow: 0 6px 20px rgba(83, 109, 254, 0.12);
-  border-color: rgba(83, 109, 254, 0.3);
-}
-
-.topic-card-top {
+.category-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.topic-icon {
-  font-size: 1.6rem;
+.category-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--card-accent, #1a237e);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  opacity: 0.9;
 }
 
-.topic-tag {
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.tag-fundamentals { background: rgba(26, 35, 126, 0.08); color: #1a237e; }
-.tag-applications { background: rgba(48, 79, 254, 0.08); color: #304ffe; }
-.tag-ethics { background: rgba(40, 53, 147, 0.08); color: #283593; }
-.tag-trends { background: rgba(0, 191, 165, 0.08); color: #00796b; }
-.tag-ax { background: rgba(255, 111, 0, 0.08); color: #e65100; }
-
-[data-theme="dark"] .tag-fundamentals { background: rgba(121, 134, 203, 0.15); color: #9fa8da; }
-[data-theme="dark"] .tag-applications { background: rgba(83, 109, 254, 0.15); color: #82b1ff; }
-[data-theme="dark"] .tag-ethics { background: rgba(121, 134, 203, 0.12); color: #9fa8da; }
-[data-theme="dark"] .tag-trends { background: rgba(0, 191, 165, 0.15); color: #80cbc4; }
-[data-theme="dark"] .tag-ax { background: rgba(255, 111, 0, 0.15); color: #ffab40; }
-
-.topic-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
+.category-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text-primary);
-  line-height: 1.4;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.category-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.category-topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.category-topics li a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.category-topics li a::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--card-accent, #1a237e);
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.category-topics li a:hover {
+  background: rgba(26, 35, 126, 0.05);
+  color: var(--text-primary);
+}
+
+.category-topics li a:hover::before {
+  opacity: 1;
+}
+
+[data-theme="dark"] .category-topics li a:hover {
+  background: rgba(83, 109, 254, 0.08);
 }
 
 /* ============================================
@@ -624,13 +606,8 @@ main {
    반응형
    ============================================ */
 @media (max-width: 1024px) {
-  .highlights-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .topics-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -661,10 +638,10 @@ main {
     font-size: 0.95rem;
   }
 
-  /* Topics */
-  .topics-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  /* Categories */
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   /* Content Layout → 1단 */
@@ -726,9 +703,6 @@ main {
 }
 
 @media (max-width: 480px) {
-  .topics-grid {
-    grid-template-columns: 1fr;
-  }
   .hero-actions {
     flex-direction: column;
     align-items: center;
