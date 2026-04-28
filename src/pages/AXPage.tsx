@@ -444,7 +444,7 @@ const AXPage = (): ReactElement => {
 
       <section className="page-header">
         <div className="container">
-          <h2>AX</h2>
+          <h2>AX (AI Transformation)</h2>
           <p>{language === 'ko' ? 'AI 트랜스포메이션 전략과 실행을 학습합니다' : 'Learn AI Transformation strategy and execution'}</p>
         </div>
       </section>
@@ -453,7 +453,7 @@ const AXPage = (): ReactElement => {
         <div className="container">
           <div className="content-layout">
             <nav className="side-nav">
-              <div className="side-nav-title">AX</div>
+              <div className="side-nav-title">AX (AI Transformation)</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}
