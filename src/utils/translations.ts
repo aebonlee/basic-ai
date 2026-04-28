@@ -201,7 +201,12 @@ export const translations: Record<string, Record<string, unknown>> = {
         whatIsAx: 'AX 개요',
         axStrategy: '기업 AX 전략',
         axCases: '산업별 AX 사례',
-        axGuide: 'AX 실행 가이드'
+        axGuide: 'AX 실행 가이드',
+        glossary: '용어사전',
+        glossaryBasics: 'AI 기초 용어',
+        glossaryTech: 'AI 기술 용어',
+        glossaryTools: 'AI 도구 & 서비스',
+        glossaryBusiness: '비즈니스 & AX 용어'
       },
       home: {
         title: 'Basic AI',
@@ -414,7 +419,12 @@ export const translations: Record<string, Record<string, unknown>> = {
         whatIsAx: 'What is AX',
         axStrategy: 'AX Strategy',
         axCases: 'Industry Cases',
-        axGuide: 'AX Guide'
+        axGuide: 'AX Guide',
+        glossary: 'Glossary',
+        glossaryBasics: 'AI Basic Terms',
+        glossaryTech: 'AI Technical Terms',
+        glossaryTools: 'AI Tools & Services',
+        glossaryBusiness: 'Business & AX Terms'
       },
       home: {
         title: 'Basic AI',

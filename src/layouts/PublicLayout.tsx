@@ -16,6 +16,7 @@ const Applications = lazy(() => import('../pages/Applications'));
 const Ethics = lazy(() => import('../pages/Ethics'));
 const Trends = lazy(() => import('../pages/Trends'));
 const AXPage = lazy(() => import('../pages/AXPage'));
+const Glossary = lazy(() => import('../pages/Glossary'));
 
 // Auth 페이지 (features.auth로 토글)
 const Login = lazy(() => import('../pages/Login'));
@@ -65,6 +66,10 @@ const PublicLayout = (): ReactElement => {
             {/* AX */}
             <Route path="/ax" element={<Navigate to="/ax/what-is-ax" replace />} />
             <Route path="/ax/:topic" element={<AXPage />} />
+
+            {/* 용어사전 */}
+            <Route path="/glossary" element={<Navigate to="/glossary/basics" replace />} />
+            <Route path="/glossary/:topic" element={<Glossary />} />
 
             {/* Auth */}
             {site.features.auth && (

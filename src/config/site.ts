@@ -132,6 +132,17 @@ const site: SiteConfig = {
         { path: '/ax/cases', labelKey: 'site.nav.axCases' },
         { path: '/ax/guide', labelKey: 'site.nav.axGuide' }
       ]
+    },
+    {
+      labelKey: 'site.nav.glossary',
+      path: '/glossary',
+      activePath: '/glossary',
+      dropdown: [
+        { path: '/glossary/basics', labelKey: 'site.nav.glossaryBasics' },
+        { path: '/glossary/tech', labelKey: 'site.nav.glossaryTech' },
+        { path: '/glossary/tools', labelKey: 'site.nav.glossaryTools' },
+        { path: '/glossary/business', labelKey: 'site.nav.glossaryBusiness' }
+      ]
     }
   ],
 
@@ -142,7 +153,8 @@ const site: SiteConfig = {
     { path: '/applications', labelKey: 'site.nav.applications' },
     { path: '/ethics', labelKey: 'site.nav.ethics' },
     { path: '/trends', labelKey: 'site.nav.trends' },
-    { path: '/ax', labelKey: 'site.nav.ax' }
+    { path: '/ax', labelKey: 'site.nav.ax' },
+    { path: '/glossary', labelKey: 'site.nav.glossary' }
   ],
 
   // Family Site 목록
