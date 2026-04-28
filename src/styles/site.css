@@ -1,0 +1,271 @@
+/* ============================================
+   Basic AI - 인공지능 기초 학습 사이트 전용 스타일
+   기본 테마: 다크 블루 (#1a237e)
+   ============================================ */
+
+/* ── 브랜드 컬러 ── */
+.brand-dream { color: #1a237e; font-weight: 700; }
+.brand-it { color: #304ffe; font-weight: 900; }
+
+[data-theme="dark"] .brand-dream { color: #7986cb; }
+[data-theme="dark"] .brand-it { color: #536dfe; }
+
+/* ── Welcome Section ── */
+.site-welcome {
+  text-align: center;
+  padding: 4rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.site-welcome h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.site-welcome p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ── Section base ── */
+.section {
+  padding: 4rem 0;
+}
+
+/* ── 학습 카테고리 카드 그리드 ── */
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.learning-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.learning-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 35, 126, 0.12);
+}
+
+[data-theme="dark"] .learning-card:hover {
+  box-shadow: 0 8px 24px rgba(83, 109, 254, 0.15);
+}
+
+.learning-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.learning-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.learning-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── 학습 콘텐츠 페이지 ── */
+.content-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.content-page h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 3px solid #1a237e;
+  padding-bottom: 0.5rem;
+}
+
+[data-color="purple"] .content-page h2 { border-bottom-color: #4a148c; }
+[data-color="green"] .content-page h2 { border-bottom-color: #1b5e20; }
+[data-color="red"] .content-page h2 { border-bottom-color: #b71c1c; }
+[data-color="orange"] .content-page h2 { border-bottom-color: #e65100; }
+
+.content-page h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.content-page p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.content-page ul,
+.content-page ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-page li {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* ── 정보 박스 ── */
+.info-box {
+  background: linear-gradient(135deg, rgba(26, 35, 126, 0.05), rgba(48, 79, 254, 0.05));
+  border: 1px solid rgba(26, 35, 126, 0.15);
+  border-left: 4px solid #1a237e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+[data-theme="dark"] .info-box {
+  background: linear-gradient(135deg, rgba(83, 109, 254, 0.08), rgba(121, 134, 203, 0.08));
+  border-color: rgba(83, 109, 254, 0.3);
+  border-left-color: #536dfe;
+}
+
+.info-box h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a237e;
+}
+
+[data-theme="dark"] .info-box h4 {
+  color: #7986cb;
+}
+
+.info-box p {
+  margin-bottom: 0;
+  font-size: 0.98rem;
+}
+
+/* ── 경고/윤리 박스 ── */
+.warning-box {
+  background: rgba(255, 152, 0, 0.06);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-left: 4px solid #ff9800;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+[data-theme="dark"] .warning-box {
+  background: rgba(255, 152, 0, 0.08);
+  border-color: rgba(255, 152, 0, 0.3);
+}
+
+.warning-box h4 {
+  color: #e65100;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ── 통계 배너 ── */
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1a237e;
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .stat-number {
+  color: #536dfe;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+/* ── 하위 네비게이션 (서브페이지 간 이동) ── */
+.sub-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sub-nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.sub-nav a:hover,
+.sub-nav a.active {
+  background: #1a237e;
+  color: #fff;
+  border-color: #1a237e;
+}
+
+[data-theme="dark"] .sub-nav a:hover,
+[data-theme="dark"] .sub-nav a.active {
+  background: #304ffe;
+  border-color: #304ffe;
+}
+
+/* ── 반응형 ── */
+@media (max-width: 768px) {
+  .learning-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-page h2 {
+    font-size: 1.6rem;
+  }
+
+  .sub-nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
