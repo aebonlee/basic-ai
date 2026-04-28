@@ -389,8 +389,9 @@ const Fundamentals = (): ReactElement => {
 
       <section className="section">
         <div className="container">
-          <div className="content-page">
-            <nav className="sub-nav">
+          <div className="content-layout">
+            <nav className="side-nav">
+              <div className="side-nav-title">{language === 'ko' ? 'AI 기초' : 'AI Basics'}</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}
@@ -402,8 +403,10 @@ const Fundamentals = (): ReactElement => {
               ))}
             </nav>
 
-            <h2>{language === 'ko' ? content.titleKo : content.titleEn}</h2>
-            {language === 'ko' ? content.contentKo : content.contentEn}
+            <div className="content-page">
+              <h2>{language === 'ko' ? content.titleKo : content.titleEn}</h2>
+              {language === 'ko' ? content.contentKo : content.contentEn}
+            </div>
           </div>
         </div>
       </section>

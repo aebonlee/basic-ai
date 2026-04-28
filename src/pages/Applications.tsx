@@ -363,8 +363,9 @@ const Applications = (): ReactElement => {
 
       <section className="section">
         <div className="container">
-          <div className="content-page">
-            <nav className="sub-nav">
+          <div className="content-layout">
+            <nav className="side-nav">
+              <div className="side-nav-title">{language === 'ko' ? 'AI 활용' : 'Applications'}</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}
@@ -376,8 +377,10 @@ const Applications = (): ReactElement => {
               ))}
             </nav>
 
-            <h2>{language === 'ko' ? content.titleKo : content.titleEn}</h2>
-            {language === 'ko' ? content.contentKo : content.contentEn}
+            <div className="content-page">
+              <h2>{language === 'ko' ? content.titleKo : content.titleEn}</h2>
+              {language === 'ko' ? content.contentKo : content.contentEn}
+            </div>
           </div>
         </div>
       </section>
