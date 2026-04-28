@@ -341,10 +341,10 @@ const Applications = (): ReactElement => {
   const content = topics[currentTopic] || topics['chatbot'];
 
   const subNavItems = [
-    { path: '/applications/chatbot', labelKo: 'ChatGPT · Claude', labelEn: 'Chatbots' },
-    { path: '/applications/image', labelKo: 'DALL-E · Midjourney', labelEn: 'Image Gen' },
-    { path: '/applications/voice', labelKo: '음성 · 영상 AI', labelEn: 'Voice & Video' },
-    { path: '/applications/coding', labelKo: 'Copilot · Cursor', labelEn: 'AI Coding' }
+    { path: '/applications/chatbot', labelKo: '챗봇 & 대화형 AI', labelEn: 'Chatbots' },
+    { path: '/applications/image', labelKo: '이미지 생성 AI', labelEn: 'Image Gen' },
+    { path: '/applications/voice', labelKo: '음성 & 영상 AI', labelEn: 'Voice & Video' },
+    { path: '/applications/coding', labelKo: 'AI 코딩 도구', labelEn: 'AI Coding' }
   ];
 
   return (
@@ -356,7 +356,7 @@ const Applications = (): ReactElement => {
 
       <section className="page-header">
         <div className="container">
-          <h2>AI Applications</h2>
+          <h2>{language === 'ko' ? 'AI 활용' : 'AI Applications'}</h2>
           <p>{language === 'ko' ? '다양한 AI 도구와 서비스의 활용법을 배웁니다' : 'Learn to use various AI tools and services'}</p>
         </div>
       </section>
@@ -365,7 +365,7 @@ const Applications = (): ReactElement => {
         <div className="container">
           <div className="content-layout">
             <nav className="side-nav">
-              <div className="side-nav-title">AI Applications</div>
+              <div className="side-nav-title">{language === 'ko' ? 'AI 활용' : 'AI Applications'}</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}

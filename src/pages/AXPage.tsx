@@ -429,8 +429,8 @@ const AXPage = (): ReactElement => {
   const content = topics[currentTopic] || topics['what-is-ax'];
 
   const subNavItems = [
-    { path: '/ax/what-is-ax', labelKo: 'AX 개요', labelEn: 'What is AX' },
-    { path: '/ax/strategy', labelKo: 'AX 전략 수립', labelEn: 'AX Strategy' },
+    { path: '/ax/what-is-ax', labelKo: 'AX 개요', labelEn: 'Overview' },
+    { path: '/ax/strategy', labelKo: '기업 AX 전략', labelEn: 'AX Strategy' },
     { path: '/ax/cases', labelKo: '산업별 AX 사례', labelEn: 'Industry Cases' },
     { path: '/ax/guide', labelKo: 'AX 실행 가이드', labelEn: 'AX Guide' }
   ];

@@ -337,10 +337,10 @@ const Trends = (): ReactElement => {
   const content = topics[currentTopic] || topics.llm;
 
   const subNavItems = [
-    { path: '/trends/llm', labelKo: 'LLM · 대규모 언어모델', labelEn: 'LLM Trends' },
-    { path: '/trends/multimodal', labelKo: 'Multimodal AI', labelEn: 'Multimodal' },
-    { path: '/trends/agents', labelKo: 'AI Agent', labelEn: 'AI Agents' },
-    { path: '/trends/opensource', labelKo: 'Open Source AI', labelEn: 'Open-source' }
+    { path: '/trends/llm', labelKo: 'LLM 동향', labelEn: 'LLM Trends' },
+    { path: '/trends/multimodal', labelKo: '멀티모달 AI', labelEn: 'Multimodal' },
+    { path: '/trends/agents', labelKo: 'AI 에이전트', labelEn: 'AI Agents' },
+    { path: '/trends/opensource', labelKo: '오픈소스 AI', labelEn: 'Open-source' }
   ];
 
   return (
@@ -352,7 +352,7 @@ const Trends = (): ReactElement => {
 
       <section className="page-header">
         <div className="container">
-          <h2>AI Trends</h2>
+          <h2>{language === 'ko' ? 'AI 트렌드' : 'AI Trends'}</h2>
           <p>{language === 'ko' ? '최신 인공지능 기술 동향을 파악합니다' : 'Stay updated with the latest AI technology trends'}</p>
         </div>
       </section>
@@ -361,7 +361,7 @@ const Trends = (): ReactElement => {
         <div className="container">
           <div className="content-layout">
             <nav className="side-nav">
-              <div className="side-nav-title">AI Trends</div>
+              <div className="side-nav-title">{language === 'ko' ? 'AI 트렌드' : 'AI Trends'}</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}

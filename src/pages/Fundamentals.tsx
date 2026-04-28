@@ -367,7 +367,7 @@ const Fundamentals = (): ReactElement => {
   const content = topics[currentTopic] || topics['what-is-ai'];
 
   const subNavItems = [
-    { path: '/fundamentals/what-is-ai', labelKo: 'AI 개요', labelEn: 'What is AI' },
+    { path: '/fundamentals/what-is-ai', labelKo: 'AI 개요', labelEn: 'Overview' },
     { path: '/fundamentals/history', labelKo: 'AI 발전사', labelEn: 'History' },
     { path: '/fundamentals/types', labelKo: 'AI 분류 체계', labelEn: 'Types' },
     { path: '/fundamentals/how-it-works', labelKo: 'AI 작동 원리', labelEn: 'How it Works' }
@@ -382,7 +382,7 @@ const Fundamentals = (): ReactElement => {
 
       <section className="page-header">
         <div className="container">
-          <h2>AI Fundamentals</h2>
+          <h2>{language === 'ko' ? 'AI 기초' : 'AI Fundamentals'}</h2>
           <p>{language === 'ko' ? '인공지능의 기본 개념을 체계적으로 학습합니다' : 'Learn AI fundamentals systematically'}</p>
         </div>
       </section>
@@ -391,7 +391,7 @@ const Fundamentals = (): ReactElement => {
         <div className="container">
           <div className="content-layout">
             <nav className="side-nav">
-              <div className="side-nav-title">AI Fundamentals</div>
+              <div className="side-nav-title">{language === 'ko' ? 'AI 기초' : 'AI Fundamentals'}</div>
               {subNavItems.map((item) => (
                 <Link
                   key={item.path}
