@@ -173,6 +173,10 @@ export const translations: Record<string, Record<string, unknown>> = {
     // ─── 사이트 전용 키 ───
     site: {
       nav: {
+        about: '소개',
+        aboutIntro: '사이트 소개',
+        aboutRoadmap: '학습 로드맵',
+        aboutHowToLearn: '학습 방법',
         fundamentals: 'AI 기초',
         whatIsAi: 'AI란 무엇인가',
         history: 'AI의 역사',
@@ -187,13 +191,23 @@ export const translations: Record<string, Record<string, unknown>> = {
         bias: '편향과 공정성',
         privacy: '개인정보 보호',
         responsibility: '책임있는 AI',
-        future: 'AI와 미래사회'
+        future: 'AI와 미래사회',
+        trends: 'AI 트렌드',
+        llm: 'LLM 동향',
+        multimodal: '멀티모달 AI',
+        agents: 'AI 에이전트',
+        opensource: '오픈소스 AI',
+        ax: 'AX',
+        whatIsAx: 'AX란 무엇인가',
+        axStrategy: '기업 AX 전략',
+        axCases: '산업별 AX 사례',
+        axGuide: 'AX 실행 가이드'
       },
       home: {
         title: 'Basic AI',
         subtitle: '인공지능의 기초부터 활용, 윤리까지 체계적으로 학습하세요',
         welcome: '인공지능 학습의 첫걸음',
-        description: 'AI가 일상이 된 시대, 누구나 쉽게 이해할 수 있는 인공지능 기초 학습 플랫폼입니다. 기초 개념부터 ��양한 활용 사례, 그리고 반드시 알아야 할 AI 윤리까지 체계적으로 학습할 수 있습니다.'
+        description: 'AI가 일상이 된 시대, 누구나 쉽게 이해할 수 있는 인공지능 기초 학습 플랫폼입니다. 기초 개념부터 다양한 활용 사례, 윤리, 최신 트렌드, AX 전략까지 체계적으로 학습할 수 있습니다.'
       }
     }
   },
@@ -372,6 +386,10 @@ export const translations: Record<string, Record<string, unknown>> = {
     // ─── Site-specific keys ───
     site: {
       nav: {
+        about: 'About',
+        aboutIntro: 'About This Site',
+        aboutRoadmap: 'Learning Roadmap',
+        aboutHowToLearn: 'How to Learn',
         fundamentals: 'AI Basics',
         whatIsAi: 'What is AI',
         history: 'History of AI',
@@ -386,13 +404,23 @@ export const translations: Record<string, Record<string, unknown>> = {
         bias: 'Bias & Fairness',
         privacy: 'Privacy Protection',
         responsibility: 'Responsible AI',
-        future: 'AI & Future Society'
+        future: 'AI & Future Society',
+        trends: 'AI Trends',
+        llm: 'LLM Trends',
+        multimodal: 'Multimodal AI',
+        agents: 'AI Agents',
+        opensource: 'Open-source AI',
+        ax: 'AX',
+        whatIsAx: 'What is AX',
+        axStrategy: 'AX Strategy',
+        axCases: 'Industry Cases',
+        axGuide: 'AX Guide'
       },
       home: {
         title: 'Basic AI',
         subtitle: 'Learn AI fundamentals, applications, and ethics systematically',
         welcome: 'Your First Step in AI Learning',
-        description: 'In an era where AI has become part of daily life, this is an accessible platform for learning AI fundamentals. From basic concepts to various use cases and essential AI ethics, learn everything systematically.'
+        description: 'In an era where AI has become part of daily life, this is an accessible platform for learning AI fundamentals. From basic concepts to applications, ethics, latest trends, and AX strategy — learn everything systematically.'
       }
     }
   }

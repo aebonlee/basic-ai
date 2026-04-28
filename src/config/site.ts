@@ -50,7 +50,7 @@ const site: SiteConfig = {
 
   // ── 기능 토글 ──
   features: {
-    shop: true,
+    shop: false,
     community: true,
     search: true,
     auth: true,
@@ -66,9 +66,18 @@ const site: SiteConfig = {
     { name: 'orange', color: '#e65100' },
   ],
 
-  // 네비게이션 ��뉴
+  // 네비게이션 메뉴
   menuItems: [
-    { path: '/', labelKey: 'nav.home' },
+    {
+      labelKey: 'site.nav.about',
+      path: '/about',
+      activePath: '/about',
+      dropdown: [
+        { path: '/about/intro', labelKey: 'site.nav.aboutIntro' },
+        { path: '/about/roadmap', labelKey: 'site.nav.aboutRoadmap' },
+        { path: '/about/how-to-learn', labelKey: 'site.nav.aboutHowToLearn' }
+      ]
+    },
     {
       labelKey: 'site.nav.fundamentals',
       path: '/fundamentals',
@@ -102,16 +111,38 @@ const site: SiteConfig = {
         { path: '/ethics/future', labelKey: 'site.nav.future' }
       ]
     },
-    { path: '/shop', labelKey: 'shop.title', activePath: '/shop' }
+    {
+      labelKey: 'site.nav.trends',
+      path: '/trends',
+      activePath: '/trends',
+      dropdown: [
+        { path: '/trends/llm', labelKey: 'site.nav.llm' },
+        { path: '/trends/multimodal', labelKey: 'site.nav.multimodal' },
+        { path: '/trends/agents', labelKey: 'site.nav.agents' },
+        { path: '/trends/opensource', labelKey: 'site.nav.opensource' }
+      ]
+    },
+    {
+      labelKey: 'site.nav.ax',
+      path: '/ax',
+      activePath: '/ax',
+      dropdown: [
+        { path: '/ax/what-is-ax', labelKey: 'site.nav.whatIsAx' },
+        { path: '/ax/strategy', labelKey: 'site.nav.axStrategy' },
+        { path: '/ax/cases', labelKey: 'site.nav.axCases' },
+        { path: '/ax/guide', labelKey: 'site.nav.axGuide' }
+      ]
+    }
   ],
 
   // 푸터 바로가기 링크
   footerLinks: [
-    { path: '/', labelKey: 'nav.home' },
+    { path: '/about', labelKey: 'site.nav.about' },
     { path: '/fundamentals', labelKey: 'site.nav.fundamentals' },
     { path: '/applications', labelKey: 'site.nav.applications' },
     { path: '/ethics', labelKey: 'site.nav.ethics' },
-    { path: '/shop', labelKey: 'shop.title' }
+    { path: '/trends', labelKey: 'site.nav.trends' },
+    { path: '/ax', labelKey: 'site.nav.ax' }
   ],
 
   // Family Site 목록

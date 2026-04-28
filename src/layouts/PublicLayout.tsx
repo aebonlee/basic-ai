@@ -10,9 +10,12 @@ const Home = lazy(() => import('../pages/Home'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 // AI 학습 페이지
+const About = lazy(() => import('../pages/About'));
 const Fundamentals = lazy(() => import('../pages/Fundamentals'));
 const Applications = lazy(() => import('../pages/Applications'));
 const Ethics = lazy(() => import('../pages/Ethics'));
+const Trends = lazy(() => import('../pages/Trends'));
+const AXPage = lazy(() => import('../pages/AXPage'));
 
 // Auth 페이지 (features.auth로 토글)
 const Login = lazy(() => import('../pages/Login'));
@@ -20,10 +23,7 @@ const Register = lazy(() => import('../pages/Register'));
 const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
 const MyPage = lazy(() => import('../pages/MyPage'));
 
-// Shop 페이지 (features.shop으로 토글)
-const Cart = lazy(() => import('../pages/Cart'));
-const Checkout = lazy(() => import('../pages/Checkout'));
-const OrderConfirmation = lazy(() => import('../pages/OrderConfirmation'));
+// 주문 이력 (마이페이지 내)
 const OrderHistory = lazy(() => import('../pages/OrderHistory'));
 
 const Loading = (): ReactElement => (
@@ -42,6 +42,10 @@ const PublicLayout = (): ReactElement => {
             {/* Home */}
             <Route path="/" element={<Home />} />
 
+            {/* 소개 */}
+            <Route path="/about" element={<Navigate to="/about/intro" replace />} />
+            <Route path="/about/:topic" element={<About />} />
+
             {/* AI 기초 */}
             <Route path="/fundamentals" element={<Navigate to="/fundamentals/what-is-ai" replace />} />
             <Route path="/fundamentals/:topic" element={<Fundamentals />} />
@@ -54,6 +58,14 @@ const PublicLayout = (): ReactElement => {
             <Route path="/ethics" element={<Navigate to="/ethics/bias" replace />} />
             <Route path="/ethics/:topic" element={<Ethics />} />
 
+            {/* AI 트렌드 */}
+            <Route path="/trends" element={<Navigate to="/trends/llm" replace />} />
+            <Route path="/trends/:topic" element={<Trends />} />
+
+            {/* AX */}
+            <Route path="/ax" element={<Navigate to="/ax/what-is-ax" replace />} />
+            <Route path="/ax/:topic" element={<AXPage />} />
+
             {/* Auth */}
             {site.features.auth && (
               <>
@@ -62,15 +74,6 @@ const PublicLayout = (): ReactElement => {
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/mypage" element={<AuthGuard><MyPage /></AuthGuard>} />
                 <Route path="/mypage/orders" element={<AuthGuard><OrderHistory /></AuthGuard>} />
-              </>
-            )}
-
-            {/* Shop */}
-            {site.features.shop && (
-              <>
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/order-confirmation" element={<OrderConfirmation />} />
               </>
             )}
 
